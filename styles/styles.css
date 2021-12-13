@@ -18,13 +18,26 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 700px;
+    /*min-height: 700px;*/
     /*box-shadow: 0px 10px 20px #0e1114;*/
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+}
+
+header .contenedor .barra-menu .menu #hamburguesa-icono,
+header .contenedor .barra-menu .menu label{
+    visibility: hidden;
+}
+
+
+label{
+    color: #fff;
+    
 }
 
 header .contenedor{
-    
     margin: auto;
+    padding-bottom: 7rem;
     overflow: hidden;
 
 }
@@ -48,12 +61,12 @@ header .contenedor .barra-menu .logo{
 
 header .contenedor .barra-menu .menu{
     width: 70%;
-    padding: 20px 0;
+    padding: 20px 20px;
     text-align: right;
 }
 
-header .menu a{
-    margin: 20px 20px;
+header .menu-detalle a{
+    margin: 10px 0px 0 35px;
     color: #fff;
     padding-bottom: 9px;
     display: inline-block;
@@ -66,21 +79,21 @@ header .menu a:hover{
     color: #d8b165;
     border-bottom: 2px solid #d8b165;
     transition: ease-in;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 
 header .contenedor-texto{
     display: flex;
-    margin: 90px;
+    margin: 90px 0 90px 0;
     justify-content: center;
     align-content: center;
     
 }
 
 header .contenedor-texto .texto{
-    display: inline-block;
+    /*display: inline-block;*/
     text-align: center;
-    padding: 0px 40px;
+    padding: 0px 0px 20px 0px;
 }
 
 header .contenedor-texto .texto h1{
@@ -120,9 +133,10 @@ main .contenedor{
 
 main .acerca-de{
     text-align: center;
-    min-height: 500px;
+    /*min-height: 500px;*/
     /*background: url("../img/background-desktop-2_1.svg");*/
-    padding: 5rem;
+    padding: 4rem 0;
+    
 }
 
 main .acerca-de .foto-perfil{
@@ -132,8 +146,8 @@ main .acerca-de .foto-perfil{
 
 main .acerca-de .foto-perfil img{
     vertical-align: top;
-    width: 300px;
-    height: 300px;
+    width: 275px;
+    height: 275px;
     border-radius: 70%;
 
     border: 5px solid rgba(255, 255, 255, 0.4);
@@ -165,12 +179,17 @@ main .servicios{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 700px;
-    padding-top: 2rem;
+    
+    /*min-height: 700px;*/
+    
 }
 
 main .servicios .contenedor{
     overflow: hidden;
+    margin: auto;
+    padding-bottom: 15rem;
+    /*padding: 1rem 0 15rem 0;*/
+    /*height: 70vh;*/
 }
 
 main .servicios .titulo{
@@ -186,12 +205,12 @@ main .servicios .contenedor-servicios{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 main .servicios .contenedor-servicios .servicio{
-    width: 23%;
+    width: 40%;
     background-color: #2c2d2e;
     display: flex;
     flex-direction: column;
@@ -260,11 +279,11 @@ main .trabajos .contenedor-trabajos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 main .trabajos .contenedor-trabajos .trabajo{
-    width: 22%;
+    width: 25%;
     margin-bottom: 30px;
 }
 
@@ -275,6 +294,7 @@ main .trabajos .contenedor-trabajos .trabajo .thumb{
 
 main .trabajos .contenedor-trabajos .trabajo .thumb img{
     width: 100%;
+    height: 100px;
     margin: auto;
     
     vertical-align: top;
@@ -394,6 +414,23 @@ footer .contacto .formulario .boton:hover{
     transition-duration: 1s;
 }
 
+footer #toast{
+    padding: 0.2rem;
+    width: 250px;
+    margin: auto;
+    background-color: #d8b165;
+    color: white;
+    text-align: center;
+    
+    border-radius: 5px;
+    
+    
+}
+
+footer #toast.escondido{
+    display: none;
+}
+
 footer .redes-sociales{
     /*background-color: #0e1114;*/
     background: url("../img/background-desktop-1.svg");
@@ -435,12 +472,80 @@ footer .redes-sociales a:hover{
 
 @media (max-width: 768px){
     header .contenedor .barra-menu .logo{
-        width: 250px;
-        height: 100px;
+        width: 100px;
+        height: 80px;
         background: url("../img/leafar-logo-2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        margin-right: 10rem;
+        /*margin-right: 20rem;*/
     }
+
+    
+
+    header .contenedor .barra-menu .menu label{
+        visibility:visible;
+        font-size: 2rem;
+    }
+
+    header .contenedor .barra-menu .menu nav{
+        display: none;
+        /*position: fixed;*/
+    }   
+
+    header .contenedor .barra-menu .menu input#hamburguesa-icono:checked ~nav{
+        position: fixed;
+        background: rgba(44,45,46,0.5);
+        top: 15;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-right: 3rem;
+        color: rgba(255, 255, 255, 0.2);
+        z-index: 5;
+    }
+
+    main .servicios .contenedor-servicios{
+        display: flex;
+        flex-direction: column;
+               
+    }
+    
+    main .servicios .contenedor-servicios .servicio{
+        width: 70%;
+        margin-bottom: 1rem;
+    
+    }
+
+    main .trabajos .contenedor-trabajos{
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+    }
+    
+    main .trabajos .contenedor-trabajos .trabajo{
+        width: 70%;
+        margin-bottom: 1rem;
+        
+    }
+
+    main .trabajos .contenedor-trabajos .trabajo .thumb{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+    footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"]{
+    width: 100%;
+    margin-bottom: 15px;
 }
+
+ }
+
+    

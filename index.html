@@ -8,7 +8,9 @@
     
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    
 </head>
 <body>
     <header>
@@ -18,15 +20,21 @@
                     
                 </div>
                     <!--<img src="img/leafar-logo.png" alt="Rafael Perez">-->
+                <div class="menu">
+                    <input type="checkbox" name="" id="hamburguesa-icono">
+                    <label for="hamburguesa-icono" id="hamburger"><i class="fa fa-bars"></i></label>
+                    <nav class="menu-detalle">
+                        <a href="#acerca-de">Acerca de</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#trabajos">Trabajos</a>
+                        <a href="#contacto">Contacto</a>
+                    </nav>
+                </div>
                 
-                <nav class="menu">
-                    <a href="#">Acerca de</a>
-                    <a href="#">Proyectos</a>
-                    <a href="#">Contactos</a>
-                </nav>
+               
             </div>
             
-            <div class="contenedor-texto">
+            <div class="contenedor-texto" >
                 <div class="texto">
                     <h1 class="name">Rafael Pérez</h1>
                     <h2 class="profesion">Desarrollador Web</h2>
@@ -36,19 +44,19 @@
     </header>
 
     <main>
-        <section class="acerca-de">
+        <section class="acerca-de" id="acerca-de">
             <div class="contenedor">
                 <div class="foto-perfil">
                     <img src="./img/foto-perfil.jpeg" width="200" height="200" alt="Rafael Perez">
                 </div>
                 <div class="texto">
                     <h3 class="titulo">Acerca de</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestias dolorem odit impedit. Tempore, repellendus nesciunt repellat sapiente harum quia quam provident placeat quae, optio facilis temporibus, maiores libero eveniet!</p>
+                    <p>Soy una persona que ha redescubierto su pasión por la programación y ha encontrado una motivación constante por mejorar, actualmente vengo cursando un Bootcamp como Desarrollador Full Stack, lugar donde vengo invirtiendo mas de 100 horas mensuales trabajo y práctica. En este Bootcamp se viene aplicando la metodología learning by Doing.</p>
                 </div>
             </div>
         </section>
 
-        <section class="servicios">
+        <section class="servicios" id="servicios">
             <div class="contenedor">
                 <h3 class="titulo">Servicios</h3>
                 <div class="contenedor-servicios">
@@ -58,7 +66,7 @@
                         </div>
                         <div class="descripcion">
                             <p class="nombre">Diseño Web</p>
-                            <p class="categoria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea ratione voluptatibus. Eius, magnam iusto.</p>
+                            <p class="categoria">Diseño y desarrollo de interfaces digitales, como el diseño de sitios y aplicaciones para web.</p>
                         </div>  
                     </div>
 
@@ -67,78 +75,53 @@
                             <a href="#" class="twitter"><i class="fa fa-code"></i></a>
                         </div>
                         <div class="descripcion">
-                            <p class="nombre">Desarrollo</p>
-                            <p class="categoria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea ratione voluptatibus. Eius, magnam iusto.</p>
+                            <p class="nombre">Desarrollo Web</p>
+                            <p class="categoria">Construcción y mantenimiento de sitios web, con apariencia impecable, funcionamiento rápido y buen desempeño</p>
                         </div>  
                     </div>
-
-                    <div class="servicio">
-                        <div class="thumb">
-                            <a href="#" class="twitter"><i class="fa fa-handshake-o"></i></a>
-                        </div>
-                        <div class="descripcion">
-                            <p class="nombre">Proyectos TIC</p>
-                            <p class="categoria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea ratione voluptatibus. Eius, magnam iusto.</p>
-                        </div>  
-                    </div>
-
-                    <div class="servicio">
-                        <div class="thumb">
-                            <a href="#" class="twitter"><i class="fa fa-newspaper-o"></i></a>
-                        </div>
-                        <div class="descripcion">
-                            <p class="nombre">Interoperabilidad</p>
-                            <p class="categoria">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eum perferendis ea omnis corrupti mollitia.</p>
-                        </div>  
-                    </div>
+                    
                 </div>
             </div>
         </section>
 
 
-        <section class="trabajos">
+        <section class="trabajos" id="trabajos">
             <div class="contenedor">
                 <h3 class="titulo">Trabajos</h3>
                 <div class="contenedor-trabajos">
                     <div class="trabajo">
                         <div class="thumb">
-                            <img src="img/foto-perfil.jpeg" alt="Trabajo 1">
+                            <a href="https://leafar1087.github.io/api-pokemon/" target="_blank"><img src="img/assets/pokeapi.png" alt="POKE-API"></a>
+                            
                         </div>
                         <div class="descripcion">
-                            <p class="nombre">Trabajo 1</p>
+                            <p class="nombre">POKE-API</p>
                             <p class="categoria">HTML - CSS - JS</p>
                         </div>  
                     </div>
 
                     <div class="trabajo">
                         <div class="thumb">
-                            <img src="img/foto-perfil.jpeg" alt="Trabajo 2">
+                            <a href="https://leafar1087.github.io/academlo_reto1/" target="_blank"><img src="img/assets/illustration-hero.svg " alt="Order Summary"></a>
+                            
                         </div>
                         <div class="descripcion">
-                            <p class="nombre">Trabajo 2</p>
-                            <p class="categoria">HTML - CSS - JS</p>
+                            <p class="nombre">ORDER SUMMARY</p>
+                            <p class="categoria">HTML - CSS</p>
                         </div>  
                     </div>
 
                     <div class="trabajo">
                         <div class="thumb">
-                            <img src="img/foto-perfil.jpeg" alt="Trabajo 3">
+                            <a href="https://leafar1087.github.io/academlo_reto2/" target="_blank"><img src="img/assets/price-grid.png" alt="Single Price Grid"></a>
+                            
                         </div>
                         <div class="descripcion">
-                            <p class="nombre">Trabajo 3</p>
-                            <p class="categoria">HTML - CSS - JS</p>
+                            <p class="nombre">SIMPLE PRICE GRID</p>
+                            <p class="categoria">HTML - CSS</p>
                         </div>  
                     </div>
-
-                    <div class="trabajo">
-                        <div class="thumb">
-                            <img src="img/foto-perfil.jpeg" alt="Trabajo 4">
-                        </div>
-                        <div class="descripcion">
-                            <p class="nombre">Trabajo 4</p>
-                            <p class="categoria">HTML - CSS - JS</p>
-                        </div>  
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -151,7 +134,7 @@
             </div>
         </section>
 
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <div class="contenedor">
                 <h3 class="titulo">Contacto</h3>
                 <form class="formulario" action="">
@@ -161,16 +144,22 @@
                     <input class="boton" type="submit" value="Enviar">
                 </form>
             </div>
+            <div id="toast" class="escondido">
+                <p>Proximamente</p>
+            </div>
+            
         </section>
             
         <section class="redes-sociales">
             <div class="contenedor">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="github"><i class="fa fa-github"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/leafar1087" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/leafar1087" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://github.com/leafar1087" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.instagram.com/leafar1087/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
         </section>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/hamburguer.js"></script>
 </body>
 </html>
